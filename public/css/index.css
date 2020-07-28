@@ -1,0 +1,73 @@
+/* Local Fonts */
+@font-face {
+    font-family: "Graphik";
+    font-weight: 300;
+    src: url("/fonts/GraphikRegular.otf") format("opentype");
+}
+
+/* 300 */
+@font-face {
+    font-family: "Graphik", sans-serif;
+    font-weight: 400;
+    src: url("/fonts/GraphikMedium.otf") format("opentype");
+}
+/* 400 */
+@font-face {
+    font-family: "Graphik", sans-serif;
+    font-weight: 500;
+    src: url("fonts/GraphikSemibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Graphik", sans-serif;
+    font-weight: 600;
+    src: url("/fonts/GraphikBold.otf") format("opentype");
+}
+/* 900 */
+@font-face {
+    font-family: "Graphik", sans-serif;
+    font-weight: 900;
+    src: url("/fonts/GraphikSuper.otf") format("opentype");
+}
+
+/* Declearing Global variables */
+
+:root {
+    
+}
+
+body {
+    font-family: "Graphik", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+
+}
+
+/********************************************************************************************************************
+
+///////////////////////////////////////////    Header Section         ///////////////////////////////////////////////
+
+*********************************************************************************************************************/
+
+.nav-item, .nav-link {
+    font-weight: 400;
+    color: black !important;
+}
+.start-btn {
+    background-color: #000000;
+    color: #ffffff !important;
+    padding: .6rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem !important;
+}
+.typed {
+    font-weight: 900;
+    font-size: 7rem;
+}
+.hero-des {
+    width: 25%;
+    float: right;
+}
+.change-text {
+    text-align: center;
+}
