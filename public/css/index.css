@@ -65,6 +65,9 @@ body {
 .text-white {
     color: white !important;
 }
+.typed-cursor {
+    display: none;
+}
 /********************************************************************************************************************
 
 ///////////////////////////////////////////    Header Section         ///////////////////////////////////////////////
@@ -81,6 +84,7 @@ body {
 .nav-link, .nav-link:hover {
     cursor: none;
 }
+
 .nav-link:hover {
     color: #ffffff !important;
 }
@@ -91,10 +95,11 @@ body {
     border-radius: 40px;
     font-size: 0.8rem !important;
 }
-.typed-text {
+.typed-text, .typed-1, .typed-2 {
     font-family: "Graphik", sans-serif;
     font-weight: 900;
     font-size: 7rem;
+    list-style: 0.5;
 }
 .animated-div {
     position: relative;
@@ -113,4 +118,45 @@ body {
 .change-text {
     text-align: left;
     font-size: 1.12rem;
+}
+
+
+/********************************************************************************************************************
+
+  ///////////////////////////////////////////   Media Query         ///////////////////////////////////////////////
+
+*********************************************************************************************************************/
+@media screen and (max-width: 990px) {
+    .cursor {
+        display: none;
+    }
+    .typed-text, .typed-1, .typed-2 {
+        font-size: 5rem;
+    }
+    .typed-heading {
+        margin-bottom: 4.3rem;
+    }
+    .change-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .typed-text, .typed-1, .typed-2 {
+        font-size: 3.5rem;
+        padding-left: 2rem;
+    }
+    .change-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .typed-text, .typed-1, .typed-2 {
+        font-size: 2.3rem;
+        padding-left: 2rem;
+    }
+    .hero-des {
+        width: 65%;
+    }
 }
