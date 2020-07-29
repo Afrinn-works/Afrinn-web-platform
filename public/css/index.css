@@ -41,8 +41,30 @@ body {
     font-weight: 300;
     font-size: 0.8rem;
     background: #E5E5E5;
+    cursor: crosshair;
+    overflow: hidden;
 }
 
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    z-index: -2;
+}
+.grow-big {
+    transform: scale(2);
+    background: rgba(0, 0, 0, 0.4)
+}
+.text-white {
+    color: white !important;
+}
 /********************************************************************************************************************
 
 ///////////////////////////////////////////    Header Section         ///////////////////////////////////////////////
@@ -56,6 +78,12 @@ body {
     font-weight: 400;
     color: black !important;
 }
+.nav-link, .nav-link:hover {
+    cursor: none;
+}
+.nav-link:hover {
+    color: #ffffff !important;
+}
 .start-btn {
     background-color: #000000;
     color: #ffffff !important;
@@ -63,7 +91,8 @@ body {
     border-radius: 40px;
     font-size: 0.8rem !important;
 }
-.typed {
+.typed-text {
+    font-family: "Graphik", sans-serif;
     font-weight: 900;
     font-size: 7rem;
 }
