@@ -1,33 +1,8 @@
 /* Local Fonts */
 @font-face {
-    font-family: "Graphik";
+    font-family: "coopld";
     font-weight: 300;
-    src: url("/fonts/GraphikRegular.otf") format("opentype");
-}
-
-/* 300 */
-@font-face {
-    font-family: "Graphik", sans-serif;
-    font-weight: 400;
-    src: url("/fonts/GraphikMedium.otf") format("opentype");
-}
-/* 400 */
-@font-face {
-    font-family: "Graphik", sans-serif;
-    font-weight: 500;
-    src: url("fonts/GraphikSemibold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "Graphik", sans-serif;
-    font-weight: 600;
-    src: url("/fonts/GraphikBold.otf") format("opentype");
-}
-/* 900 */
-@font-face {
-    font-family: "Graphik", sans-serif;
-    font-weight: 900;
-    src: url("/fonts/GraphikSuper.otf") format("opentype");
+    src: url("/fonts/COOPBL.ttf") format("truetype");
 }
 
 /* Declearing Global variables */
@@ -37,7 +12,7 @@
 }
 
 body {
-    font-family: "Graphik", sans-serif;
+    font-family: "coopld", sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
     background: #E5E5E5;
@@ -78,7 +53,7 @@ body {
     height: 100vh;
 }
 .nav-item, .nav-link {
-    font-weight: 400;
+    font-weight: normal;
     color: black !important;
 }
 .nav-link, .nav-link:hover {
@@ -96,33 +71,57 @@ body {
     font-size: 0.8rem !important;
 }
 .typed-text, .typed-1, .typed-2 {
-    font-family: "Graphik", sans-serif;
+    font-family: "coopld", sans-serif;
     font-weight: 900;
-    font-size: 7rem;
+    font-size: 7.2rem;
     list-style: 0.5;
 }
 .animated-div {
     position: relative;
 }
-.line-anime {
-    border: none;
-    border-bottom: .1rem solid black;
-    width: 100%;
-}
 .hero-des {
     width: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    /* position: relative; */
 }
-.change-text {
+.line-anime {
+    --line-bottom: 120px;
+    --line-width: 50%;
+    border: none;
+    border-bottom: .1rem solid black;
+    width: var(--line-width);
+    position: absolute;
+    right: 0;
+    bottom: var(--line-bottom);
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+}
+.change-text { 
     text-align: left;
     font-size: 1.12rem;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-name: slideIn;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+
 }
 
 
 @keyframes slideIn {
-    
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /********************************************************************************************************************

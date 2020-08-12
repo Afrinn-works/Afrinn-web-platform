@@ -25,17 +25,6 @@ const changingP = [
     "Talents are to be cordinated and channel to yeild excelent results"
 ]
 
-// var point = 0;
-
-// function changeText() {
-//     typed1.textContent = tops[point];
-//     typed2.textContent = bottom[point];
-//     if (point < (tops.length - 1) && point < bottom.length) {
-//         point++;
-//     } else {
-//         point = 0;
-//     }
-// }
 
 //  Mouse Effects
 window.addEventListener('mousemove', (e) => {
@@ -77,22 +66,3 @@ anime.timeline({
         easing: "easeOutExpo",
         delay: 1000
     });
-
-
-let count = 0;
-
-
-function changeText() {
-    $('.change-text').fadeOut('slow', function () {
-        $('.change-text').replaceWith("<p class='change-text'>" + changingP[count] + "</div>");
-        $('.change-text').fadeIn('slow');
-    });
-    if (count < (changingP.length - 1)) {
-        count++;
-    } else {
-        count = 0;
-    }
-}
-
-// setInterval(changeText, 5000);
-// changeText();
